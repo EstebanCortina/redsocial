@@ -48,9 +48,9 @@
               </ul>
             </li>
           </ul>
-          <form class="d-flex" role="search">
+          <form class="d-flex" role="search" method="post">
             <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
-            <button class="btn btn-outline-success" type="submit">Buscar</button>
+            <button class="btn btn-outline-success" type="button" id="searchUser">Buscar</button>
           </form>
         </div>
       </div>
@@ -71,7 +71,7 @@
     <div class="d-flex justify-content-center gap-3">
 
       <!--Lista de los usuarios con su informacion desplegable con la informacion-->
-      <div class="accordion accordion-flush formato" id="userNamesList">
+      <div class="formato d-grid gap-3" id="userNamesList">
 
         <!--
         <div class="accordion-item">
@@ -95,24 +95,25 @@
 
       </div>
 
-
-      <!--Informacion del usuario en un scroll-->
-      <div class="overflow-auto content-scroll rounded">
-        <p id="userPosts">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, quasi veniam! Harum,
-          aut. Ducimus, corporis
-          necessitatibus vel cupiditate, sunt dolore neque nemo magnam ratione assumenda distinctio possimus a
-          blanditiis fugit?
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste neque magnam, nemo explicabo et doloribus
-          vero
-          consequuntur, ipsam atque maiores natus ratione quasi dolorem excepturi a saepe consectetur perspiciatis!
-          Iste.
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda quidem iste, laboriosam nemo veritatis
-          magni
-          nisi facere adipisci ratione itaque tempora provident repellat ea. Illum unde ipsa omnis. Iure, eligendi!
-        </p>
-      </div>
+      <section>
+        <!--Publicaciones del usuario en un scroll-->
+        <div class="overflow-auto content-scroll rounded ">
+          <p id="userPosts">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, quasi veniam! Harum,
+            aut. Ducimus, corporis
+            necessitatibus vel cupiditate, sunt dolore neque nemo magnam ratione assumenda distinctio possimus a
+            blanditiis fugit?
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste neque magnam, nemo explicabo et doloribus
+            vero
+            consequuntur, ipsam atque maiores natus ratione quasi dolorem excepturi a saepe consectetur perspiciatis!
+            Iste.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda quidem iste, laboriosam nemo veritatis
+            magni
+            nisi facere adipisci ratione itaque tempora provident repellat ea. Illum unde ipsa omnis. Iure, eligendi!
+          </p>
+        </div>
 
     </div>
+  </section>
 
   </section>
 
@@ -141,7 +142,7 @@
         "bs": "harness real-time e-markets"
       }
     }];
-    let dataUsers = new User(users);
+    let dataUsers = new Users(users);
     getAllUsers(users);
 
   </script>

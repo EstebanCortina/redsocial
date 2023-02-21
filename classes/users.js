@@ -1,4 +1,4 @@
-class User {
+class Users {
   constructor(dataUser) {
     this.data = dataUser;
     this.last = dataUser.length;
@@ -14,8 +14,7 @@ class User {
   }
 
   addUser(newUser) {
-    let last = this.last + 1;
-    newUser.id = last;
+    newUser.id = this.last + 1;
     this.data.push(newUser);
   }
 }
