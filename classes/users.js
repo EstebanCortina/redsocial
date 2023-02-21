@@ -13,20 +13,9 @@ class User {
     return user[i];
   }
 
-  postUser(newUser) {
+  addUser(newUser) {
     let last = this.last + 1;
     newUser.id = last;
     this.data.push(newUser);
   }
-
-  getUsers() {
-    let lista = "";
-    for (let i = 0; i < this.data.length; i++) {
-      //obtener el elemento HTML y agregarle el valor de lista
-      lista += JSON.stringify(this.data[i]);
-    }
-    return lista;
-  }
-
-
 }
