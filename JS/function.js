@@ -2,7 +2,7 @@ const USERNAMES_LIST = document.getElementById('userNamesList');
 const SEARCH_USER = document.getElementById('searchUser');
 
 SEARCH_USER.addEventListener('click', () => {
-  location.href = "form.html?v=1";
+  location.href = "views/form.html?v=1";
 });
 
 function getAllUsers(data) {
@@ -19,4 +19,23 @@ function getAllUsers(data) {
 </div>`
   });
 
+}
+
+function getGET() {
+  // capturamos la url
+  var loc = document.location.href;
+  // si existe el interrogante
+  if (loc.indexOf('?') > 0) {
+    // cogemos la parte de la url que hay despues del interrogante
+    var getString = loc.split('?')[1];
+    // obtenemos un array con cada clave=valor
+    var GET = getString.split('&');
+    var get = {};
+    // recorremos todo el array de valores
+    for (var i = 0, l = GET.length; i < l; i++) {
+      var tmp = GET[i].split('=');
+      get[tmp[0]] = unescape(decodeURI(tmp[1]));
+    }
+    return get;
+  }
 }
