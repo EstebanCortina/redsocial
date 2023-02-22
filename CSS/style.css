@@ -12,3 +12,19 @@ body {
 .formato {
   width: 400px;
 }
+
+.form {
+  display: none;
+}
+
+/* Webkit modification para quitar las flechas de incremento y decremento de los input que sean type number */
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
