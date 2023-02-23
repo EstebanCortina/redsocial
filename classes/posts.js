@@ -1,20 +1,23 @@
 class Posts {
   constructor(dataPosts) {
     this.data = dataPosts;
+
   }
   getUserPosts(searchId) {
     for (let ID of this.data) {
       if (ID.userId == searchId) {
-        //MANDAR AL ELEMENTO HTML
+        return ID;
       }
     }
   }
   getPosts(searchId) {
-    for (let ID of this.data) {
-      if (ID.id == searchId) {
-        //MANDAR AL ELEMENTO HTML DEL TEXTO AL SCROLL
+    let findedPosts = [];
+    for (let data of this.data) {
+      if (data.userId == searchId) {
+        findedPosts.push(data);
       }
     }
+    return findedPosts;
   }
 }
 
