@@ -20,4 +20,3 @@ class Posts {
     return findedPosts;
   }
 }
-
