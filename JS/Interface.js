@@ -10,7 +10,6 @@ GET_ID.forEach(l => {
 
 
 
-const FORM = document.getElementById('form');
 const BTN_SEARCH_USER = document.getElementById('btnSearchUser');
 
 //Botones e inputs adentro del formulario
