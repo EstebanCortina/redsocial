@@ -5,12 +5,12 @@ class Users {
   }
 
   searchUserByUserName(name) {
-    let i = 0;
-    let user = this.data;
-    while (user[i].username != name) {
-      i++;
+    for (let data of this.data) {
+      if (data.username == name) {
+        return data;
+      }
     }
-    return user[i];
+    return '';
   }
 
   searchUserById(id) {
@@ -30,6 +30,6 @@ class Users {
   addUser(newUser) {
     newUser.id = this.last + 1;
     this.data.push(newUser);
-    getAllUsers(this.data);
+    return this.data;
   }
 }
