@@ -38,7 +38,7 @@ function showAllUsers(data) {
   </div>
 </div>`
   });
-  USERNAMES_LIST.innerHTML += "<button id='AddUser' class='btn-primary'>Agregar</button>"
+  USERNAMES_LIST.innerHTML += "<button id='AddUser' class='btn btn-success'>Agregar</button>"
   setListeners();
 }
 
