@@ -151,13 +151,11 @@
   </section>
   <!--SCRIPTS CON FUNCIONES-->
   <script src="JS/App.js"></script>
-  <script src="JS/tabla.js"></script>
   <!--Carga de datos (onlye once)-->
   <script>
     const dataUsers = new Users(users);
     const dataPosts = new Posts(posts);
     showAllUsers(dataUsers.getList());
-    crearTabla(dataUsers.getList());
   </script>
   <!--SCRIPT PARA LLAMADAS A FUNCIONES-->
   <script src="JS/Interface.js"></script>
